@@ -1,0 +1,351 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+
+    width: 100px;
+    height: 50px;
+
+}
+
+
+.front-image {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+    max-height: 700px;
+    overflow: hidden;
+
+}
+
+.front-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.front-image h1 {
+    position: absolute;
+    left: 100px;
+    top: 30%;
+
+    color: white;
+    font-size: 70px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+
+    display: flex;
+    height: 60px;
+    background-color: #fff;
+    z-index: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    right: 20px;
+}
+
+.nav-menu {
+
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+
+
+}
+
+.nav-item {
+
+    padding-left: 27px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-booknow {
+
+    color: white;
+    background-color: #201E77;
+    padding: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    margin-left: 470px;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.nav-item-number {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 20px;
+
+
+}
+
+/* start of section 2 css */
+
+.section2 {
+    padding-top: 25px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.section2-title {
+    text-align: center;
+    font-size: 15px;
+    color: #1F1D75;
+}
+
+.section2-body {
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    width: 1050px;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    max-width: 370px;
+    position: relative;
+    float: center;
+    width: 22%;
+}
+
+.card-img {
+    width: 350px;
+    height: 250px;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+
+}
+
+.card {
+    margin-top: 10px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: white;
+}
+
+.card-title {
+    color: black;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* start of section 3 css */
+
+.section3 {
+    padding: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.section3-title {
+
+    font-size: 15px;
+    padding: 30px;
+
+    color: #1F1D75;
+
+}
+
+.section3 .row {
+    max-width: 90%;
+    height: 70px;
+    
+}
+
+.card-body3 {
+    padding: 20px;
+    margin: 0 auto;
+ 
+
+    line-height: 1.6;
+    font-size: 17px;
+
+    font-weight: 400;
+    padding-right: 20px;
+    color: black;
+}
+
+.card-title3 {
+
+    color: #1F1D75;
+
+}
+
+
+
+/* start of section 4 css */
+.section4 {
+
+    text-align: center;
+    padding-top: 290px;
+    margin: 20px;
+}
+
+form {
+
+    font-size: 15px;
+}
+
+.section4 h2 {
+
+    color: #1F1D75;
+
+}
+
+input {
+
+    width: 460px;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.btn-submit {
+
+    background-color: #1F1D75;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 30px;
+    padding-top: 10px;
+    align-items: center;
+
+}
+
+
+/* start of footer section css */
+.footer {
+
+    background-color: #1F1D75;
+    padding: 30px 30px;
+    margin: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 250px;
+
+
+
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 10px;
+}
+
+
+.footer .column {
+    flex: 1;
+    min-width: 230px;
+    padding: 10px;
+}
+
+.footer-links ul li {
+    display: inline;
+    list-style: none;
+    margin: 10px 0;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    color: #1F1D75;
+}
+
+.footer-contacts h3,
+.footer-socials h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-contacts p,
+.footer-socials ul {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-socials ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.footer-socials ul li {
+    margin-bottom: 10px;
+    display: inline;
+
+}
+
+
+.footer-socials ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}

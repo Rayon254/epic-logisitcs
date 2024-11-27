@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Epic Logistics</title>
+    <link rel="icon" href="logo.png">
+    <link href="../templates/static/index.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar" id="about">
+        <ul class="nav-menu">
+            <li class="nav-item"><img src="../templates/images/logo.png" alt="logo" href="/about" class="logo"></li>
+
+            <li class="nav-item"><a href="#about">ABOUT</a></li>
+            <li class="nav-item"><a href="#services">SERVICES</a></li>
+            <li class="nav-item"><a href="#contact">CONTACT</a></li>
+            <li class="nav-item">
+                <button class="btn-booknow" id="booknowButton">BOOK A CONSULTATION</button>
+            </li>
+
+            <li class="nav-item-number">+254 798 596 018</li>
+        </ul>
+    </div>
+
+    <div class="front-image">
+        <img src="../templates/images/front image.png" alt="Logistics">
+        <h1>Your Trusted Partner <br> in Seamless Logistics</h1>
+    </div>
+    <div class="section2" id="services">
+        <div class="section2-title">
+
+            <h1>Our Services</h1>
+        </div>
+
+        <p class="section2-body">At Epic Logistics, we provide comprehensive and tailored solutions
+            to meet your unique logistics needs. From efficient freight forwarding and secure warehousing to
+            seamless last-mile delivery, our services are designed to optimize your supply chain,
+            ensure timely deliveries, and enhance your overall business efficiency.</p>
+
+
+
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="https://easychinawarehouse.com/wp-content/uploads/2023/04/global-freight-forwarding-easy-china-warehouse.jpg"
+                        alt="Freight Forwarding" class="card-img">
+
+                    <h3 class="card-title"> Freight Forwarding</h3>
+                </div>
+            </div>
+
+
+            <div class="column">
+                <div class="card">
+                    <img src="https://generalcargo.co.ke/wp-content/uploads/2019/10/storage-landing.jpg"
+                        alt="Warehousing and Distribution" class="card-img">
+                    <h3 class="card-title"> Warehousing and Distribution</h3>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="https://www.anstelglobal.com/wp-content/uploads/2021/06/last-mile-banner.jpg"
+                        alt=" Last-Mile Delivery" class="card-img">
+                    <h3 class="card-title"> Last-Mile Delivery</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section3">
+
+        <div class="section3-title">
+            <h1>Why Choose Epic Logistics?</h1>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+
+                    <h3 class="card-title3"> Comprehensive Solutions</h3>
+                    <p class="card-body3"> Efficient management of your global transportation needs,
+                        ensuring goods are securely moved across air, sea, and land, and delivered on time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+
+                    <h3 class="card-title3"> On-Time Delivery Guarantee</h3>
+                    <p class="card-body3"> Our focus is on timely shipments, using a trusted network to ensure goods
+                        arrive at their destinations as planned without delay. </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+
+                    <h3 class="card-title3"> Customized Logistics Plans</h3>
+                    <p class="card-body3">
+                        Tailored logistics solutions to meet your business's unique needs
+                        and objectives, with flexibility across various industries and markets.
+
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+
+                    <h3 class="card-title3"> Technology-Driven Transparency</h3>
+                    <p class="card-body3">
+                        Real-time tracking and analytics ensure full visibility,
+                        empowering informed and data-driven decisions for optimized logistics.
+
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="section4" id="contact">
+
+            <h2>GET IN TOUCH</h2>
+            <h3>Contact Us</h3>
+
+
+            <form id="formsubmissions" action="{{ url_for('index') }}" method="POST">
+
+                <input type="text" id="firstname" name="firstname" placeholder="First Name" required><br>
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name" required><br>
+                <input type="number" id="phonenumber" name="phonenumber" placeholder="Phone Number" required><br>
+                <input type="text" id="emailaddress" name="emailaddress" placeholder="Email Address" required><br>
+                <input type="submit" value="SUBMIT" class="btn-submit">
+            </form>
+
+            {% if firstname %}
+            <div class="form-submission-success">
+                <h2>Form Submitted Successfully!</h2>
+                <p>First Name: {{ firstname }}</p>
+                <p>Last Name: {{ lastname }}</p>
+                <p>Email Address: {{ emailaddress }}</p>
+                <p>Phone Number: {{ phonenumber }}</p>
+            </div>
+            {% endif %}
+
+
+        </div>
+
+        <div class="footer">
+            <div class="row">
+                <div class="column">
+                    <div class="footer-contacts">
+                        <h3>Our Contacts</h3>
+                        <p>For all general inquiries,
+                            Please contact us at</p>
+                        <p>+254 798 596 018</p>
+                        <p>info@epiclogistics.com</p>
+
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="column">
+                    <div class="footer-socials">
+                        <h3>Follow Us On</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/" target="_blank"><i
+                                        class="fa-brands fa-facebook fa-lg" style="color: #ffffff;"></i></a></li>
+                            <li><a href="https://ke.linkedin.com/" target="_blank"><i
+                                        class="fa-brands fa-x-twitter fa-lg" style="color: #ffffff;"></i></a></li>
+                            <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"
+                                        style="color: #ffffff;"></i></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i
+                                        class="fa-brands fa-square-instagram fa-lg" style="color: #ffffff;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <p style="font-size: 12px;"> Epic Logistics 2024 | Website by Rayon </p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("emailaddress").value = "";
+            document.getElementById("phonenumber").value = "";
+
+            console.log("Form submitted");
+        });
+
+        function myFunction() {
+            document.getElementById("formsubmissions").submit();
+            console.log("Submit button clicked");
+        }
+
+        document.getElementById("booknowButton").addEventListener("click", function () {
+            document.querySelector(".section4").scrollIntoView({ behavior: "smooth" });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
