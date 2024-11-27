@@ -134,22 +134,11 @@
 
             <form id="formsubmissions" action="{{ url_for('index') }}" method="POST">
 
-                <input type="text" id="firstname" name="firstname" placeholder="First Name" required><br>
-                <input type="text" id="lastname" name="lastname" placeholder="Last Name" required><br>
-                <input type="number" id="phonenumber" name="phonenumber" placeholder="Phone Number" required><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required><br>
                 <input type="text" id="emailaddress" name="emailaddress" placeholder="Email Address" required><br>
+                <input type="text" id="message" name="message" placeholder="Message" required><br>
                 <input type="submit" value="SUBMIT" class="btn-submit">
             </form>
-
-            {% if firstname %}
-            <div class="form-submission-success">
-                <h2>Form Submitted Successfully!</h2>
-                <p>First Name: {{ firstname }}</p>
-                <p>Last Name: {{ lastname }}</p>
-                <p>Email Address: {{ emailaddress }}</p>
-                <p>Phone Number: {{ phonenumber }}</p>
-            </div>
-            {% endif %}
 
 
         </div>

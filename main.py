@@ -1,29 +1,25 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_mail import Mail, Message
-
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     
-    firstname = lastname = emailaddress = phonenumber = None
+    fullname = emailaddress = message = None
 
     if request.method == 'POST':
        
-        firstname = request.form.get('firstname')
-        lastname = request.form.get('lastname')
+        fullname = request.form.get('firstname')
         emailaddress = request.form.get('emailaddress')
-        phonenumber = request.form.get('phonenumber')
+        message = request.form.get('message')
 
-  
 
     return render_template(
         'index.html',
-        firstname=firstname,
-        lastname=lastname,
+        fullname=fullname,
         emailaddress=emailaddress,
-        phonenumber=phonenumber
+        message=message
     )
 if __name__ == "__main__":
     app.debug = True
