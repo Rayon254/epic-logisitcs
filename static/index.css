@@ -400,13 +400,32 @@ footer p {
         display: none;
     }
 }
-
-
+.front-image {
+    width: 100%;  
+    height: auto; 
+    object-fit: cover; 
+}
+.front-image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden; 
+    position: relative; 
+}
 @media screen and (max-width: 600px) {
     .navbar {
         padding: 10px;
     }
-
+.front-image {
+    width: 100%;  
+    height: auto; 
+    object-fit: cover; 
+}
+    .front-image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden; 
+    position: relative; 
+}
     .btn-booknow {
         font-size: 10px;
         padding: 8px 10px;
