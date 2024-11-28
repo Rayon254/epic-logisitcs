@@ -108,7 +108,10 @@ html {
 
 .section2 {
     padding-top: 25px;
-
+display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+    padding: 10px; 
 }
 
 * {
@@ -170,6 +173,10 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    text-align: center;
     margin-top: 10px;
     height: 100%;
     font-size: 16px;
@@ -511,5 +518,14 @@ footer p {
     footer {
         padding: 20px;
     }
-    
+   
+@media screen and (max-width: 480px) {
+    .section-2 {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .card img {
+        width: 100%; 
+    }
+} 
 }
