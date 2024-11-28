@@ -380,7 +380,11 @@ footer p {
     .hamburger-menu {
         display: block;
     }
-
+.front-image h1 {
+        font-size: 30px; 
+        left: 20px; 
+        top: 20%; 
+    }
    
     .nav-menu {
         display: none;
