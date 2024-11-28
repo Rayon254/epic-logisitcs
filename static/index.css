@@ -478,7 +478,9 @@ footer p {
     overflow: hidden; 
     position: relative; 
 }
-
+ .column {
+        width: 30%; 
+    }
      .section2-body {
         width: 90%; 
         font-size: 15px; 
