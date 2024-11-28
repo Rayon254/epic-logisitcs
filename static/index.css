@@ -528,13 +528,4 @@ footer p {
         padding: 20px;
     }
    
-@media screen and (max-width: 480px) {
-    .section-2 {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-
-    .card img {
-        width: 100%; 
-    }
-} 
 }
