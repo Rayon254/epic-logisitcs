@@ -391,7 +391,13 @@ footer p {
         left: 20px; 
         top: 20%; 
     }
-   
+    .section-2 {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .card img {
+        width: 90%; 
+    }
     .nav-menu {
         display: none;
         flex-direction: column;
