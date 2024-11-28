@@ -405,6 +405,15 @@ footer p {
     .card img {
         width: 90%; 
     }
+
+    .contact-form,
+    .footer {
+        margin-top: 20px; 
+    }
+    .section-4 {
+    margin-top: 20px;
+    z-index: 1;
+}
     .nav-menu {
         display: none;
         flex-direction: column;
