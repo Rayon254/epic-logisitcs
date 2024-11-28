@@ -240,10 +240,12 @@ body {
 
 /* start of section 4 css */
 .section4 {
-
+   position: relative; 
     text-align: center;
     padding-top: 290px;
     margin: 20px;
+    clear: both;
+     padding: 40px 20px;
 }
 
 form {
@@ -254,11 +256,11 @@ form {
 .section4 h2 {
 
     color: #1F1D75;
-
+margin-bottom: 20px;
 }
 
 input {
-
+max-width: 460px;
     width: 460px;
     height: 45px;
     margin-bottom: 20px;
@@ -273,8 +275,11 @@ input {
     color: white;
     font-weight: bold;
     font-size: 17px;
-    padding: 0px;
-
+  
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
     align-items: center;
 
 }
