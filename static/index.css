@@ -286,9 +286,9 @@ footer {
     background-color: #1F1D75;
     color: white;
     padding: 30px;
-
+    clear: both; 
     text-align: center;
-
+     position: relative;
 
 
 }
