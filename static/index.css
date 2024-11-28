@@ -1,3 +1,12 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    min-height: 100%;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -12,7 +21,7 @@ html {
 
 .front-image {
     position: relative;
-
+    top: 10px;
     display: inline-block;
     width: 100%;
     max-height: 700px;
@@ -23,6 +32,7 @@ html {
 .front-image img {
     width: 100%;
     object-fit: cover;
+
 }
 
 
@@ -44,6 +54,7 @@ html {
     z-index: 1000;
     font-family: Arial, Helvetica, sans-serif;
     right: 20px;
+    padding-top: 13px;
 }
 
 .nav-menu {
@@ -75,12 +86,12 @@ html {
 
     color: white;
     background-color: #201E77;
-    padding: 12px;
+    padding: 11px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 4px;
-    margin-left: 470px;
-    font-size: 14px;
+    margin-left: 490px;
+    font-size: 12px;
     font-weight: bold;
 
 }
@@ -202,13 +213,13 @@ body {
 .section3 .row {
     max-width: 90%;
     height: 70px;
-    
+
 }
 
 .card-body3 {
     padding: 20px;
     margin: 0 auto;
- 
+
 
     line-height: 1.6;
     font-size: 17px;
@@ -261,91 +272,116 @@ input {
     color: white;
     font-weight: bold;
     font-size: 17px;
-    padding: 30px;
-    padding-top: 10px;
+    padding: 0px;
+
     align-items: center;
 
 }
 
+/* start of footer css */
 
-/* start of footer section css */
-.footer {
+footer {
 
     background-color: #1F1D75;
-    padding: 30px 30px;
-    margin: 0;
-    width: 100%;
     color: white;
+    padding: 30px;
+
     text-align: center;
-    height: 250px;
 
 
 
 }
 
-.footer .row {
+.footer-wrapper {
+    
+   
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+
+.footer-row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin: 0 auto;
-    max-width: 1200px;
     flex-wrap: wrap;
-    flex: 1;
-    padding: 10px;
+
 }
 
 
-.footer .column {
+.footer-column {
     flex: 1;
-    min-width: 230px;
-    padding: 10px;
+    padding: 5px;
+
+}
+
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+
+.footer-socials ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-socials ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.footer-socials ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-socials ul li a:hover {
+    color: #FFD700;
+}
+
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 .footer-links ul li {
-    display: inline;
-    list-style: none;
-    margin: 10px 0;
-    text-align: center;
-    padding: 5px;
+    margin-bottom: 10px;
 }
 
 .footer-links ul li a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
 }
 
 .footer-links ul li a:hover {
-    color: #1F1D75;
+    color: #FFD700;
 }
 
-.footer-contacts h3,
-.footer-socials h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
 
-.footer-contacts p,
-.footer-socials ul {
-    font-size: 14px;
-    line-height: 1.5;
-}
+    left: 0;
+    width: 100%;
+    min-height: 10px;
 
-.footer-socials ul {
-    list-style: none;
-    padding: 0;
 
 }
 
-.footer-socials ul li {
-    margin-bottom: 10px;
-    display: inline;
+@media screen and (max-width: 600px) {
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 
-}
-
-
-.footer-socials ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }

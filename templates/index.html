@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Epic Logistics</title>
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="/static/images/logo.png">
     <link href="../static/index.css" rel="stylesheet">
 
 
@@ -17,7 +17,7 @@
 <body>
     <div class="navbar" id="about">
         <ul class="nav-menu">
-            <li class="nav-item"><img src="../static/images/logo.png" alt="logo" href="/about" class="logo"></li>
+            <li class="nav-item"><img src="/static/images/logo.png" alt="logo" href="/about" class="logo"></li>
 
             <li class="nav-item"><a href="#about">ABOUT</a></li>
             <li class="nav-item"><a href="#services">SERVICES</a></li>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="front-image">
-        <img src="../static/images/front image.png" alt="Logistics">
+        <img src="/static/images/front image.png" alt="Logistics">
         <h1>Your Trusted Partner <br> in Seamless Logistics</h1>
     </div>
     <div class="section2" id="services">
@@ -129,13 +129,11 @@
         <div class="section4" id="contact">
 
             <h2>GET IN TOUCH</h2>
-            <h3>Contact Us</h3>
 
 
-            <form id="formsubmissions" action="{{ url_for('index') }}" method="POST">
-
-                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required><br>
-                <input type="text" id="emailaddress" name="emailaddress" placeholder="Email Address" required><br>
+            <form id="formsubmissions" onsubmit="showAlert(event);" method="POST">
+                <input type="text" id="name" name="name" placeholder="Name" required><br>
+                <input type="text" id="email" name="email" placeholder="Email" required><br>
                 <input type="text" id="message" name="message" placeholder="Message" required><br>
                 <input type="submit" value="SUBMIT" class="btn-submit">
             </form>
@@ -143,21 +141,19 @@
 
         </div>
 
-        <div class="footer">
-            <div class="row">
-                <div class="column">
-                    <div class="footer-contacts">
+
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-row">
+
+                    <div class="footer-column">
                         <h3>Our Contacts</h3>
-                        <p>For all general inquiries,
-                            Please contact us at</p>
-                        <p>+254 798 596 018</p>
-                        <p>info@epiclogistics.com</p>
-
-
+                        <p>Phone: +254 798 596 018</p>
+                        <p>Email: info@epiclogistics.com</p>
                     </div>
-                </div>
-                <div class="column">
-                    <div class="footer-links">
+
+
+                    <div class="column footer-links">
                         <h3>Quick Links</h3>
                         <ul>
                             <li><a href="#about">About Us</a></li>
@@ -165,52 +161,75 @@
                             <li><a href="#contact">Contact Us</a></li>
                         </ul>
                     </div>
-                </div>
 
 
-                <div class="column">
-                    <div class="footer-socials">
-                        <h3>Follow Us On</h3>
+                    <div class="column footer-socials">
+                        <h3>Follow Us</h3>
                         <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank"><i
-                                        class="fa-brands fa-facebook fa-lg" style="color: #ffffff;"></i></a></li>
-                            <li><a href="https://ke.linkedin.com/" target="_blank"><i
-                                        class="fa-brands fa-x-twitter fa-lg" style="color: #ffffff;"></i></a></li>
-                            <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"
-                                        style="color: #ffffff;"></i></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><i
-                                        class="fa-brands fa-square-instagram fa-lg" style="color: #ffffff;"></i></a>
+                            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
                             </li>
+                            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </footer>
+
+        <div class="footer-bottom">
+            <p>Epic Logistics 2024 | Website by Rayon</p>
         </div>
 
 
-        <p style="font-size: 12px;"> Epic Logistics 2024 | Website by Rayon </p>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("fname").value = "";
-            document.getElementById("lname").value = "";
-            document.getElementById("emailaddress").value = "";
-            document.getElementById("phonenumber").value = "";
-
-            console.log("Form submitted");
-        });
-
-        function myFunction() {
-            document.getElementById("formsubmissions").submit();
-            console.log("Submit button clicked");
-        }
-
-        document.getElementById("booknowButton").addEventListener("click", function () {
-            document.querySelector(".section4").scrollIntoView({ behavior: "smooth" });
-        });
 
 
-    </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+
+                console.log("Form submitted");
+            });
+
+
+            emailjs.init("y7RkHp2YGl45itIrp");
+
+            function showAlert(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+
+                alert(`Form submitted successfully!`);
+
+
+                const formData = new FormData();
+                formData.append("name", name);
+                formData.append("email", email);
+                formData.append("message", message);
+
+
+                emailjs.sendForm("service_38wxnwh", "template_nxzl0lu", document.getElementById("formsubmissions"))
+                    .then((response) => {
+                        console.log("Success:", response);
+                    }, (error) => {
+                        console.error("Failed:", error);
+                    });
+            }
+
+            document.getElementById("booknowButton").addEventListener("click", function () {
+                document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+            });
+        </script>
+
+
 
 </body>
 

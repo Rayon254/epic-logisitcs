@@ -6,19 +6,19 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     
-    fullname = emailaddress = message = None
+    name = email = message = None
 
     if request.method == 'POST':
        
-        fullname = request.form.get('firstname')
-        emailaddress = request.form.get('emailaddress')
+        name = request.form.get('name')
+        email = request.form.get('email')
         message = request.form.get('message')
 
 
     return render_template(
         'index.html',
-        fullname=fullname,
-        emailaddress=emailaddress,
+        name=name,
+        email=email,
         message=message
     )
 if __name__ == "__main__":
